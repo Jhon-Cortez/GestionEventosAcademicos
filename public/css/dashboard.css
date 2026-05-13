@@ -12,6 +12,13 @@ li {
     text-decoration: none;
     color : #fff;
 }
+a{
+    text-decoration: none;
+    color : #fff;
+}
+a:hover {
+    color: #ddd;
+}
 [name="login"] {
     margin-left: auto;
     margin-right: 20px;
