@@ -1,5 +1,5 @@
 export class UserModel {
-
+    //aca igual, supuesto arreglo hotfix
     static validate(email, password) {
 
         email = email.trim();
