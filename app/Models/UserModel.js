@@ -2,17 +2,37 @@ export class UserModel {
 
     static validate(email, password) {
 
-        if (email !== '' && password !== '') {
+        email = email.trim();
 
-            window.location.href =
-                window.location.href ="../Views/dashboard.html";
+        // validar gmail
+        const gmailRegex =
+            /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
 
-            return true;
+        if (!gmailRegex.test(email)) {
+
+            alert(
+                "Correo inválido, solo se permite @gmail.com"
+            );
+
+            return false;
         }
 
-        alert("Campos vacíos");
+        // password vacío
+        if (password.trim() === '') {
 
-        return false;
+            alert(
+                "La contraseña es obligatoria"
+            );
+
+            return false;
+        }
+
+        // redirección
+        window.location.href =
+            "dashboard.html";
+
+        return true;
+
     }
 
 }
